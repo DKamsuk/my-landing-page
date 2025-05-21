@@ -1,0 +1,241 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Хедер */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  gap: 1rem;
+  background-color: #000;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  max-height: 30px;
+  margin-right: 60px;
+  height: auto;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+.nav-link.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Основное содержимое */
+.dorty-main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Сетка тортов */
+.dorty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.dorty-card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dorty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dorty-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.dorty-card:hover .dorty-image {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+}
+
+.dorty-name {
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Футер */
+.footer {
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer a,
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover,
+.social-link:hover,
+.footer a:focus,
+.social-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .dorty-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .dorty-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.dorty-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-decoration:none;
+}
+
+.dorty-card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dorty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для заголовков с линиями */
+.section-title-with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem 0;
+  color: white;
+}
+
+.section-title-with-lines .line {
+  flex: 1;
+  height: 1px;
+  background-color: white;
+  margin: 0 20px;
+  max-width: 200px;
+}
+
+.section-title-with-lines .title-text {
+  padding: 0 15px;
+}
+
+/* Адаптивность для линий */
+@media (max-width: 768px) {
+  .section-title-with-lines .line {
+    margin: 0 10px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title-with-lines {
+    font-size: 1.5rem;
+  }
+  .section-title-with-lines .line {
+    display: none; /* На очень маленьких экранах можно скрыть линии */
+  }
+}

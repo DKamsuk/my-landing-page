@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROSTOR - Rezervace</title>
+  <link rel="stylesheet" href="css/reservation.css" />
+  <link rel="icon" href="img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+</head>
+<body>
+<header class="header">
+  <img src="img/index/logo3.png" alt="PROSTOR Logo" class="logo" />
+  <nav class="nav" aria-label="Hlavní navigace">
+    <a href="index.html" class="nav-link">Domov</a>
+    <a href="menu.html" class="nav-link">Menu</a>
+    <a href="dorty.html" class="nav-link">Dorty</a>
+    <a href="reservation.html" class="nav-link">Rezervace</a>
+    <a href="index.html#Akce" class="nav-link">Akce</a>
+    <a href="kontakt.html" class="nav-link">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="section-title-with-lines">
+    <span class="line"></span>
+    <span class="title-text">Rezervace místa</span>
+    <span class="line"></span>
+  </h2>
+  
+  <div class="reservation-container">
+    <div class="seating-map">
+      <h3 class="map-title">Plán kavárny</h3>
+      <div class="cafe-layout">
+        <!-- Столы 1-5 -->
+        <div class="table-group">
+          <div class="table" data-number="1" data-info="Stůl 1 - 2 místa" data-seats="2"></div>
+          <div class="table" data-number="2" data-info="Stůl 2 - 2 místa" data-seats="2"></div>
+          <div class="table" data-number="3" data-info="Stůl 3 - 2 místa" data-seats="2"></div>
+          <div class="table occupied" data-number="4" data-info="Stůl 4 - 2 místa (obsazeno)" data-seats="2"></div>
+          <div class="table" data-number="5" data-info="Stůl 5 - 2 místa" data-seats="2"></div>
+        </div>
+        
+        <!-- Столы 6-10 -->
+        <div class="table-group">
+          <div class="table" data-number="6" data-info="Stůl 6 - 4 místa" data-seats="4"></div>
+          <div class="table" data-number="7" data-info="Stůl 7 - 4 místa" data-seats="4"></div>
+          <div class="table occupied" data-number="8" data-info="Stůl 8 - 4 místa (obsazeno)" data-seats="4"></div>
+          <div class="table" data-number="9" data-info="Stůl 9 - 4 místa" data-seats="4"></div>
+          <div class="table" data-number="10" data-info="Stůl 10 - 3 místa" data-seats="3"></div>
+        </div>
+        
+        <!-- Столы 11-15 -->
+        <div class="table-group">
+          <div class="table" data-number="11" data-info="Stůl 11 - 3 místa" data-seats="3"></div>
+          <div class="table" data-number="12" data-info="Stůl 12 - 3 místa" data-seats="3"></div>
+          <div class="table occupied" data-number="13" data-info="Stůl 13 - 3 místa (obsazeno)" data-seats="3"></div>
+          <div class="table" data-number="14" data-info="Stůl 14 - 2 místa" data-seats="2"></div>
+          <div class="table" data-number="15" data-info="Stůl 15 - 2 místa" data-seats="2"></div>
+        </div>
+        
+        <!-- Столы 16-20 -->
+        <div class="table-group">
+          <div class="table" data-number="16" data-info="Stůl 16 - 2 místa" data-seats="2"></div>
+          <div class="table occupied" data-number="17" data-info="Stůl 17 - 2 místa (obsazeno)" data-seats="2"></div>
+          <div class="table" data-number="18" data-info="Stůl 18 - 4 místa" data-seats="4"></div>
+          <div class="table" data-number="19" data-info="Stůl 19 - 4 místa" data-seats="4"></div>
+          <div class="table" data-number="20" data-info="Stůl 20 - 4 místa" data-seats="4"></div>
+        </div>
+      </div>
+      
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color free"></div>
+          <span>Volné</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color selected-legend"></div>
+          <span>Vybrané</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color occupied-legend"></div>
+          <span>Obsazené</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reservation-form">
+      <h3 class="map-title">Rezervace</h3>
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="date">Datum</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="time">Čas</label>
+          <input type="time" id="time" name="time" min="08:00" max="22:00" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="guests">Počet hostů</label>
+          <select id="guests" name="guests" required>
+            <option value="">Vyberte počet</option>
+            <option value="1">1 osoba</option>
+            <option value="2">2 osoby</option>
+            <option value="3">3 osoby</option>
+            <option value="4">4 osoby</option>
+            <option value="5">5 osob</option>
+            <option value="6">6 osob</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="table">Vybraný stůl</label>
+          <input type="text" id="table" name="table" readonly placeholder="Vyberte stůl na mapě">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+420 123 456 789">
+        </div>
+        
+        <button type="submit" class="reserve-btn" disabled>Rezervovat</button>
+      </form>
+    </div>
+  </div>
+
+  <h2 class="section-title-with-lines">
+    <span class="line"></span>
+    <span class="title-text">Pravidla etikety v PROSTORU</span>
+    <span class="line"></span>
+  </h2>
+
+  <div class="etiquette-rules">
+    <div class="rule-card">
+      <div class="rule-icon">!</div>
+      <div class="rule-content">
+        <h3>Rezervace</h3>
+        <p>Prosíme o dodržování času vaší rezervace. Při pozdním příchodu nad 15 minut si nemůžeme garantovat stůl.</p>
+      </div>
+    </div>
+    
+    <div class="rule-card">
+      <div class="rule-icon">!</div>
+      <div class="rule-content">
+        <h3>Návštěva se psy</h3>
+        <p>Vážení hosté se psy - psi jsou vítáni, ale prosíme o vodítko a udržování psa u nohy.</p>
+      </div>
+    </div>
+    
+    <div class="rule-card">
+      <div class="rule-icon">!</div>
+      <div class="rule-content">
+        <h3>Děti v kavárně</h3>
+        <p>Děti jsou v PROSTORU vítány, ale prosíme rodiče o dohled nad jejich chováním.</p>
+      </div>
+    </div>
+    
+    <div class="rule-card">
+      <div class="rule-icon">!</div>
+      <div class="rule-content">
+        <h3>Platba</h3>
+        <p>Přijímáme platby v hotovosti i kartou. Při platbě kartou minimální částka 100 Kč.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-section">
+    <h4>ADRESA</h4>
+    <address>
+      Teplická 59/49<br />
+      Podmokly, Děčín
+    </address>
+  </div>
+  <div class="footer-section">
+    <h4>KONTAKT</h4>
+    <p>+420 721 229 915</p>
+  </div>
+  <div class="footer-section">
+    <h4>VE SPOJENÍ</h4>
+    <nav aria-label="Sociální sítě">
+      <a href="https://www.facebook.com/profile.php?id=61557099741050" class="social-link">Facebook</a> |
+      <a href="https://www.instagram.com/prostordecin" class="social-link">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/reservation.js"></script>
+</body>
+</html>

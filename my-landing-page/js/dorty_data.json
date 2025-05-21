@@ -1,0 +1,23 @@
+{
+  "red_velvet": {
+    "name": "RED VELVET",
+    "description": "Klasický americký dort s charakteristickou červenou barvou a jemným krémovým sýrovým krémem. Složení: červené piškoty, krémový sýr, máslo, vanilkový extrakt.",
+    "image": "img/dorty/red_velvet.jpg",
+    "prices": [
+      {"size": "8 porcí", "price": "650 Kč"},
+      {"size": "12 porcí", "price": "800 Kč"},
+      {"size": "18 porcí", "price": "1300 Kč"},
+      {"size": "32 porcí", "price": "2200 Kč"}
+    ]
+  },
+  "mrkvac": {
+    "name": "Mrkvač",
+    "description": "Vlhký mrkvový dort s ořechy a krémem z mascarpone. Ideální pro milovníky přírodních chutí.",
+    "image": "img/dorty/mrkvac.jpg",
+    "prices": [
+      {"size": "8 porcí", "price": "600 Kč"},
+      {"size": "12 porcí", "price": "750 Kč"},
+      {"size": "18 porcí", "price": "1200 Kč"}
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+/* Základní styly */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header - stejný jako na hlavní stránce */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Hlavní obsah */
+.dort-detail-container {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dort-main-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dort-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.dort-image:hover {
+  transform: scale(1.02);
+  filter: brightness(0.95);
+}
+
+.dort-description h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dort-description p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Sekce s objednávkou */
+.dort-order-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.price-options {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.price-option {
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.price-option:hover {
+  background-color: #333;
+}
+
+.price-option.selected {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.order-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 95%;
+  padding: 1rem;
+  background-color: #222;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.order-button {
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.order-button:hover {
+  background-color: #ffd633;
+}
+
+.order-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Footer - stejný jako na hlavní stránce */
+.footer {
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer a,
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover,
+.social-link:hover,
+.footer a:focus,
+.social-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+
+/* Responsivní styly */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  
+  .dort-detail-container {
+    flex-direction: column;
+  }
+}
+
+.dorty-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dorty-card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dorty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Фиксированные размеры для основного фото торта */
+.dort-image-container {
+  width: 100%;
+  height: 400px; /* Фиксированная высота */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.dort-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезаем фото, сохраняя пропорции */
+  transition: transform 0.4s ease;
+}
+
+/* Для страницы со списком тортов (dorty.html) */
+.dorty-image {
+  width: 100%;
+  height: 250px; /* Фиксированная высота */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Тень и рамка для фото */
+.dort-image-container {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .dort-image-container {
+    height: 300px;
+  }
+  
+  .dorty-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dort-image-container {
+    height: 250px;
+  }
+}

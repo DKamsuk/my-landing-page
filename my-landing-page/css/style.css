@@ -1,0 +1,552 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Обертка логотипа */
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #000;
+}
+
+.logo {
+  max-height: 30px;
+  margin-right: 60px;
+  height: auto;
+  width: auto;
+}
+
+/* Хедер */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  gap: 1rem;
+  background-color: #000;
+  position: relative;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+/* Заголовки с линиями */
+.section-title-with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  position: relative;
+  z-index: 10;
+  background-color: #000;
+  padding: 10px 0; /* Уменьшенный отступ */
+  margin-bottom: 20px; /* Добавлен отступ снизу */
+}
+
+.section-title-with-lines .line {
+  flex: 1;
+  height: 1px;
+  background-color: white;
+  margin: 0 20px;
+  max-width: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title-with-lines .title-text {
+  padding: 0 25px;
+  position: relative;
+  z-index: 2;
+  background-color: #000;
+}
+
+/* Разделенный блок с фото и текстом */
+.hero-split {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 30px; /* Уменьшил отступ сверху */
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.hero-image-container {
+  flex: 0 0 40%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) brightness(0.9) blur(3px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scale(1.05);
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1rem;
+  transition: none;
+  transform: none !important;
+}
+
+/* Эффект при наведении */
+.hero-split:hover .hero-image {
+  filter: grayscale(0%) brightness(1) blur(0);
+  transform: scale(1);
+}
+
+.hero-split:hover .hero-image-container {
+  flex: 0 0 35%;
+}
+
+/* Секция Interiér */
+.interior-section {
+  background-color: #000;
+  margin: 0 auto 30px; /* Уменьшил отступ снизу */
+  padding: 0 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.gallery-custom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 2rem; /* Убрал верхний отступ */
+}
+
+.gallery-custom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-custom img:hover {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.gallery-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.gallery-vertical-top {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.gallery-vertical-bottom {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.gallery-side {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+/* Стили для раздела скидок и календаря */
+.discounts-calendar {
+  background-color: #000;
+  margin: 0 auto 30px; /* Уменьшил отступ снизу */
+  color: #fff;
+  position: relative;
+  z-index: 5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.discounts-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem; /* Уменьшил отступ снизу */
+}
+
+.discount-card {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.discount-card:hover {
+  transform: translateY(-5px);
+}
+
+.discount-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.discount-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.discount-info p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* Обертка для календаря и событий */
+.calendar-events-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem; /* Уменьшил отступ сверху */
+  align-items: flex-start;
+}
+
+/* Компактный круговой календарь */
+.compact-calendar {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.calendar-title {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+  color: #fff;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  width: 100%;
+  justify-items: center;
+}
+
+.day {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.day:hover {
+  background-color: #ffcc00;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* События */
+.calendar-events {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.events-title {
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.event-date {
+  font-weight: 700;
+  margin-right: 1rem;
+  color: #ffcc00;
+  min-width: 25px;
+}
+
+.event-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+/* Футер */
+.footer {
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer a,
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover,
+.social-link:hover,
+.footer a:focus,
+.social-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Стили для дней с акциями */
+.day.event-day {
+  background-color: #ff3333;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.day.event-day::after {
+  content: "★";
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  font-size: 12px;
+  color: #ffcc00;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .gallery-custom {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+    width: 95%;
+    padding: 1rem 0;
+  }
+
+  .gallery-main {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .gallery-vertical-top {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .gallery-vertical-bottom {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .gallery-side {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .hero-split {
+    flex-direction: column;
+  }
+  
+  .hero-image-container {
+    flex: 0 0 300px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .hero-split:hover .hero-image-container {
+    flex: 0 0 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .calendar-events-wrapper {
+    flex-direction: column;
+  }
+  
+  .compact-calendar {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  
+  .calendar-days {
+    gap: 6px;
+  }
+  
+  .day {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .section-title-with-lines .line {
+    margin: 0 10px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner {
+    height: 220px;
+    width: 98vw;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+    padding: 0 0.5rem;
+  }
+
+  .gallery-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .gallery-custom img {
+    width: 100%;
+    height: auto;
+  }
+
+  .day {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+  
+  .event-text {
+    font-size: 0.85rem;
+  }
+
+  .hero-image-container {
+    flex: 0 0 250px;
+  }
+  
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .section-title-with-lines {
+    font-size: 1.2rem;
+  }
+
+  .section-title-with-lines .line {
+    display: none;
+  }
+}

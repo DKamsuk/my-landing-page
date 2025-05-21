@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROSTOR - Detail dortu</title>
+  <link rel="stylesheet" href="css/dorty_info.css">
+  <link rel="icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img src="img/index/logo3.png" alt="PROSTOR Logo" class="logo">
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="index.html" class="nav-link">Domov</a>
+      <a href="menu.html" class="nav-link">Menu</a>
+      <a href="dorty.html" class="nav-link">Dorty</a>
+      <a href="reservation.html" class="nav-link">Rezervace</a>
+      <a href="index.html#Akce" class="nav-link">Akce</a>
+      <a href="kontakt.html" class="nav-link">Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="dort-detail-container">
+    <div class="dort-main-info">
+      <div class="dort-image-container">
+        <img id="dort-image" src="" alt="" class="dort-image">
+      </div>
+      <div class="dort-description">
+        <h1 id="dort-name"></h1>
+        <div class="dort-composition">
+          <h3>Složení</h3>
+          <p id="dort-description-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dort-order-section">
+      <div class="prices-container">
+        <h3>Velikost</h3>
+        <div id="price-options" class="price-options"></div>
+      </div>
+
+      <div class="order-form">
+        <h3>Objednávka</h3>
+        <div class="form-group">
+          <label for="date">Datum</label>
+          <input type="date" id="date" name="date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="phone">Tel. číslo</label>
+          <input type="tel" id="phone" name="phone" placeholder="+420 ..." class="form-input">
+        </div>
+        <button class="order-button">Objednat</button>
+        <p class="order-info">Můžete si vybrat počet porcí dortu, které chcete, uvést datum a číslo Vašeho telefonu a my Vám zavoláme zpět pro upřesnění Vaší objednávky.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-section">
+      <h4>ADRESA</h4>
+      <address>Teplická 59/49<br>Podmokly, Děčín</address>
+    </div>
+    <div class="footer-section">
+      <h4>KONTAKT</h4>
+      <p>+420 721 229 915</p>
+    </div>
+    <div class="footer-section">
+      <h4>VE SPOJENÍ</h4>
+      <nav aria-label="Sociální sítě">
+        <a href="https://www.facebook.com/profile.php?id=61557099741050" class="social-link">Facebook</a> |
+        <a href="https://www.instagram.com/prostordecin" class="social-link">Instagram</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/dorty_info.js"></script>
+</body>
+</html>
